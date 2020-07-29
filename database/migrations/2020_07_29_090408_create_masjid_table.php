@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKaswargaTable extends Migration
+class CreateMasjidTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateKaswargaTable extends Migration
      */
     public function up()
     {
-        Schema::create('kaswarga', function (Blueprint $table) {
+        Schema::create('masjid', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tgl');
-            $table->string('uraian');
-            $table->string('pemasukan');
-            $table->string('pengeluaran');
-            $table->string('jenis');
+            $table->string('namamasjid');
+            $table->string('luastanah');
+            $table->string('statustanah');
+            $table->string('luasbangunan');
+            $table->string('tahunberdiri');
+            $table->string('dayatampung');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateKaswargaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kaswarga');
+        Schema::dropIfExists('masjid');
     }
 }
