@@ -16,7 +16,6 @@ class CreateKasmasjidTable extends Migration
         Schema::create('kasmasjid', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('masjid_id');
-            $table->unsignedInteger('pengurusmasjid_id');
             $table->string('nama');
             $table->string('jumlah');
             $table->string('keterangan');
